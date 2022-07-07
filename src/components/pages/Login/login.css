@@ -1,0 +1,124 @@
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.login-right{
+    background-color: #3434df9d;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    padding: 20px;
+    width: 500px;
+    height: 500px;
+}
+
+.login-logo img{
+    width: 300px;
+    height: 300px;
+}
+
+.login-right h1{
+    font: 50px 'Roboto Mono';
+    background: transparent;
+    margin-bottom: 20px;
+}
+
+.login-right h4{
+    font-family: 'Roboto Mono';
+    margin-top: 40px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #e1e1e6;
+    background: transparent;
+}
+
+.login-loginInputEmail{
+    display: flex;
+    align-items: center;
+    color: gray;
+    background-color: #1A1A1D;
+    border-radius: 5px;
+    padding: 3px;
+    width: 98%;
+    height: 50px;
+}
+
+.login-loginInputEmail svg{
+    margin-left: 10px;
+    font-size: 25px;
+    background: transparent;
+}
+
+.login-loginInputEmail input{
+    background: transparent;
+    width: 100%;
+    outline-width: 0;
+    color: #E1E1E6;
+    border: none;
+    font-size: 17px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.login-loginInputPassword{
+    display: flex;
+    align-items: center;
+    color: gray;
+    background-color: #1A1A1D;
+    border-radius: 5px;
+    padding: 3px;
+    width: 98%;
+    height: 50px;
+    margin-top: 5px;
+}
+
+.login-loginInputPassword svg{
+    margin-left: 10px;
+    font-size: 25px;
+    background: transparent;
+}
+
+.login-loginInputPassword input{
+    background: transparent;
+    width: 100%;
+    outline-width: 0;
+    color: #E1E1E6;
+    border: none;
+    font-size: 17px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.login-right button{
+    width: 100%;
+    background-color: #202024;
+    color: #EFF2F5;
+    font-weight: 800;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 5px;
+    border: none;
+
+    outline-width: 0;
+}
+
+.login-right button:hover{
+    background-color: #171719;
+    color: #EFF2F5;
+    cursor: pointer;
+}
+
+.login-eye {
+    margin-right: 10px;
+    font-size: 5px;
+    background: transparent;
+    cursor: pointer;
+}
