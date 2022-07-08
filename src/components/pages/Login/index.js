@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './login.css'
+import logo from '../Login/Educa logo.png'
 
 import { MdMail, MdLock } from "react-icons/md";
 import { HiEye, HiEyeOff } from "react-icons/hi";
@@ -25,11 +26,9 @@ function Login() {
 
     return(
         <div className="login">
-            <div className="login-logo">
-                <img src="https://cdn-icons-png.flaticon.com/512/5087/5087579.png" alt="Login App" />
-            </div>
 
             <div className="login-right">
+            <img src={logo} alt="Logo Educa" />
                 <h1>Acessar App</h1>
 
                 <div className="login-loginInputEmail">

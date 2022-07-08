@@ -1,3 +1,7 @@
+body{
+    background-color: #333;
+}
+
 .login {
     display: flex;
     justify-content: center;
@@ -19,20 +23,23 @@
     height: 500px;
 }
 
-.login-logo img{
-    width: 300px;
-    height: 300px;
+.login-right img{
+    width: 350px;
+    height: 120px;
+    background: transparent;
+    margin-bottom: 15px;
 }
 
 .login-right h1{
     font: 50px 'Roboto Mono';
     background: transparent;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    margin-top: 0;
 }
 
 .login-right h4{
     font-family: 'Roboto Mono';
-    margin-top: 40px;
+    margin-top: 20px;
     font-size: 15px;
     font-weight: 500;
     color: #e1e1e6;
