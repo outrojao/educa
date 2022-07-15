@@ -1,7 +1,9 @@
+import logo from './pages/Login/Educa logo.png'
+
 function Cadastro(){
     return(
         <div>
-            <p>sfkhgklasjgd</p>
+            <img src={logo} alt='sdfghjk'></img>
         </div>
     )
 }

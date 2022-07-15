@@ -1,18 +1,21 @@
 import styles from '../styles/Login.module.css'
 import { useState } from 'react';
+import Cadastro from './Cadastro';
 
 function Login(){
     const fotoPessoa = 'https://via.placeholder.com/150';
 
-    const[nome, setNome] = useState("")
-    const[senha, setSenha] = useState("")
+    const[nome, setNome] = useState()
+    const[senha, setSenha] = useState()
+    const[userNome, setUserNome] = useState()
+    const[userSenha, setUserSenha] = useState()
 
     
 
-    function checarUsuario(){
-        if(nome === 'João' && senha === 123){
-            alert('Login efetuado com sucesso')
-        }
+    function logarUsuario(e){
+        e.preventDefault()
+        setUserNome(nome)
+        setUserSenha(senha)
     }
 
     return(
@@ -23,10 +26,13 @@ function Login(){
                 <input type="image" src="" alt="" />
                 <input type="file" name="" id="" />
                 <p>Nome:</p>
-                <input type="text" name="" id="" onChange={ e => setNome( e.target.value ) }/>
+                <input type="text" name="" id="" placeholder="Ex: user@email.com" onChange={ e => setNome( e.target.value ) }/>
                 <p>Senha:</p>
                 <input type="number" name="" id="" onChange={ e => setSenha( e.target.valueAsNumber )}/>
-                <input type="button" value="Logar" onClick={checarUsuario}/>
+                <button type='submit' onClick={logarUsuario}>Logar</button>
+                {userNome && userSenha (
+                    <Cadastro/>
+                )}
             </form>
         </div>
         

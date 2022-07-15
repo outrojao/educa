@@ -1,28 +1,47 @@
 import React, { useState } from "react";
 import './login.css'
 import logo from '../Login/Educa logo.png'
-
+import Cadastro from '../../Cadastro';
 import { MdMail, MdLock } from "react-icons/md";
 import { HiEye, HiEyeOff } from "react-icons/hi";
 
 function Login() {
 
-    const [email, setEmail] = useState("")
-    const [senha, setSenha] = useState("")
+    const [email, setEmail] = useState()
+    const [senha, setSenha] = useState()
     const [show, setShow] = useState(false)
+    const[userEmail, setUserEmail] = useState()
+    const[userSenha, setUserSenha] = useState()
+
+    
+
+    function logarUsuario(e){
+        e.preventDefault()
+        setUserEmail(email)
+        setUserSenha(senha)
+    }
 
     const handleClick = (e) => {
         e.preventDefault()
         setShow(!show);
     }
 
-    function checarUsuario(){
-        if(email === 'jvsantosrocha980@gmail.com' && senha === '12345678'){
-            alert('Usuário acessou o app')
-        }else{
-            alert('Por favor cheque as informações')
-        }
+    function cadastrarUsuario(){
+        return(
+            <>
+                <Cadastro/>
+            </>
+            
+        )
     }
+
+    // function checarUsuario(){
+    //     if(email === 'jvsantosrocha980@gmail.com' && senha === '12345678'){
+    //         alert('Usuário acessou o app')
+    //     }else{
+    //         alert('Por favor cheque as informações')
+    //     }
+    // }
 
     return(
         <div className="login">
@@ -35,7 +54,7 @@ function Login() {
                 <MdMail/>
                     <input
                         type='email'
-                        placeholder='Digite um email'
+                        placeholder="Digite um email"
                         value={email}
                         onChange={e => setEmail(e.target.value)}
                     />
@@ -64,17 +83,23 @@ function Login() {
                     </div>
                 </div>
 
-                <button type="submit" onClick={checarUsuario}>
+                <button type="submit" onClick={logarUsuario}>
                     Entrar
                 </button>
 
                 <h4>Não tem cadastro?</h4>
-                <button type="submit">
+                <button type="submit" onClick={cadastrarUsuario}>
                     Cadastrar
                 </button>
 
                 
             </div>
+
+            {userEmail && userSenha && (
+                    <div>
+                        <p>O e-mail inserido foi {userEmail}, a senha foi {userSenha}</p>
+                    </div>
+                )}
             
         </div>
     )
