@@ -1,7 +1,7 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import './login.css'
 import logo from '../Login/Educa logo.png'
-import Cadastro from '../../Cadastro';
 import { MdMail, MdLock } from "react-icons/md";
 import { HiEye, HiEyeOff } from "react-icons/hi";
 
@@ -14,7 +14,6 @@ function Login() {
     const[userSenha, setUserSenha] = useState()
 
     
-
     function logarUsuario(e){
         e.preventDefault()
         setUserEmail(email)
@@ -25,23 +24,6 @@ function Login() {
         e.preventDefault()
         setShow(!show);
     }
-
-    function cadastrarUsuario(){
-        return(
-            <>
-                <Cadastro/>
-            </>
-            
-        )
-    }
-
-    // function checarUsuario(){
-    //     if(email === 'jvsantosrocha980@gmail.com' && senha === '12345678'){
-    //         alert('Usuário acessou o app')
-    //     }else{
-    //         alert('Por favor cheque as informações')
-    //     }
-    // }
 
     return(
         <div className="login">
@@ -88,10 +70,9 @@ function Login() {
                 </button>
 
                 <h4>Não tem cadastro?</h4>
-                <button type="submit" onClick={cadastrarUsuario}>
-                    Cadastrar
-                </button>
-
+                <Link to='/cadastrar'>
+                    <button>Cadastrar</button>
+                </Link>
                 
             </div>
 

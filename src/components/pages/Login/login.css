@@ -116,7 +116,22 @@ body{
     outline-width: 0;
 }
 
-.login-right button:hover{
+.login-right a{
+    width: 100%;
+    background-color: #202024;
+    color: #EFF2F5;
+    font-weight: 800;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 5px;
+    border: none;
+
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.login-right button:hover, .login-right a:hover{
     background-color: #171719;
     color: #EFF2F5;
     cursor: pointer;
