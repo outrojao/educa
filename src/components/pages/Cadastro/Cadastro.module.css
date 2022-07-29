@@ -1,0 +1,173 @@
+.cadastro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.cadastro_container{
+    background-color: #3434df9d;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 500px;
+    height: 90%;
+}
+
+.cadastro_container img{
+    width: 350px;
+    height: 120px;
+    background: transparent;
+    margin-bottom: 10px;
+}
+
+.cadastro_container label{
+    align-self: flex-start;
+    font-family: 'Arial', cursive;
+    font-size: 20px;
+    margin-top: 1rem;
+}
+
+.cadastro_container h4{
+    font-family: 'Roboto Mono';
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #e1e1e6;
+    background: transparent;
+}
+
+.cadastro_cadastroInputName{
+    display: flex;
+    align-items: center;
+    color: gray;
+    background-color: #1A1A1D;
+    border-radius: 5px;
+    padding: 3px;
+    width: 98%;
+    height: 70px;
+}
+
+.cadastro_cadastroInputName svg{
+    margin-left: 10px;
+    font-size: 25px;
+    background: transparent;
+}
+
+.cadastro_cadastroInputName input{
+    background: transparent;
+    width: 100%;
+    outline-width: 0;
+    color: #E1E1E6;
+    border: none;
+    font-size: 17px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.cadastro_cadastroInputEmail{
+    display: flex;
+    align-items: center;
+    color: gray;
+    background-color: #1A1A1D;
+    border-radius: 5px;
+    padding: 3px;
+    width: 98%;
+    height: 70px;
+}
+
+.cadastro_cadastroInputEmail svg{
+    margin-left: 10px;
+    font-size: 25px;
+    background: transparent;
+}
+
+.cadastro_cadastroInputEmail input{
+    background: transparent;
+    width: 100%;
+    outline-width: 0;
+    color: #E1E1E6;
+    border: none;
+    font-size: 17px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.cadastro_cadastroInputPassword{
+    display: flex;
+    align-items: center;
+    color: gray;
+    background-color: #1A1A1D;
+    border-radius: 5px;
+    padding: 3px;
+    width: 98%;
+    height: 70px;
+    margin-top: 5px;
+}
+
+.cadastro_cadastroInputPassword svg{
+    margin-left: 10px;
+    font-size: 25px;
+    background: transparent;
+}
+
+.cadastro_cadastroInputPassword input{
+    background: transparent;
+    width: 100%;
+    outline-width: 0;
+    color: #E1E1E6;
+    border: none;
+    font-size: 17px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.cadastro_container button{
+    width: 100%;
+    background-color: #202024;
+    color: #EFF2F5;
+    font-weight: 800;
+    height: 70px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 5px;
+    border: none;
+
+    outline-width: 0;
+}
+
+.cadastro_container a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    background-color: #202024;
+    color: #EFF2F5;
+    font-weight: 800;
+    height: 70px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 5px;
+    border: none;
+    text-decoration: none;
+
+    outline-width: 0;
+}
+
+.cadastro_container button:hover, .cadastro_container a:hover{
+    background-color: #171719;
+    color: #EFF2F5;
+    cursor: pointer;
+}
+
+.cadastro_eye {
+    margin-right: 10px;
+    font-size: 5px;
+    background: transparent;
+    cursor: pointer;
+}

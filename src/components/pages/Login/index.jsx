@@ -1,21 +1,32 @@
-import React, { useState } from "react";
-import { Link } from 'react-router-dom';
-import './login.css'
-import logo from '../Login/Educa logo.png'
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from 'react-router-dom';
+import styles from './Login.module.css'
+import logo from '../imagens/Educa logo.png'
 import { MdMail, MdLock } from "react-icons/md";
 import { HiEye, HiEyeOff } from "react-icons/hi";
 
 function Login() {
 
-    const [email, setEmail] = useState()
-    const [senha, setSenha] = useState()
+    const [email, setEmail] = useState('')
+    const [senha, setSenha] = useState('')
     const [show, setShow] = useState(false)
-    const[userEmail, setUserEmail] = useState()
-    const[userSenha, setUserSenha] = useState()
+    const[userEmail, setUserEmail] = useState('')
+    const[userSenha, setUserSenha] = useState('')
+
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        if( userEmail && userSenha ){
+            navigate('/home')
+        }
+    })
 
     
     function logarUsuario(e){
         e.preventDefault()
+        if(!email || !senha){
+            alert('Por favor cheque se os campos estão preenchidos')
+        }
         setUserEmail(email)
         setUserSenha(senha)
     }
@@ -26,31 +37,31 @@ function Login() {
     }
 
     return(
-        <div className="login">
+        <div className={styles.login}>
 
-            <div className="login-right">
+            <div className={styles.login_container}>
             <img src={logo} alt="Logo Educa" />
                 <h1>Acessar App</h1>
 
-                <div className="login-loginInputEmail">
+                <div className={styles.login_loginInputEmail}>
                 <MdMail/>
                     <input
                         type='email'
-                        placeholder="Digite um email"
+                        placeholder="Digite seu email"
                         value={email}
                         onChange={e => setEmail(e.target.value)}
                     />
                 </div>
 
-                <div className="login-loginInputPassword">
+                <div className={styles.login_loginInputPassword}>
                     <MdLock/>
                     <input
                         type={show ? 'text' : 'password'} //operador ternário
-                        placeholder='Digite uma senha'
+                        placeholder='Digite sua senha'
                         value={senha}
                         onChange={e => setSenha(e.target.value)}
                     />
-                    <div className="login-eye">
+                    <div className={styles.login_eye}>
                         {show ? (
                             <HiEye
                                 size={20}
@@ -71,16 +82,10 @@ function Login() {
 
                 <h4>Não tem cadastro?</h4>
                 <Link to='/cadastrar'>
-                    <button>Cadastrar</button>
+                    Cadastrar
                 </Link>
                 
             </div>
-
-            {userEmail && userSenha && (
-                    <div>
-                        <p>O e-mail inserido foi {userEmail}, a senha foi {userSenha}</p>
-                    </div>
-                )}
             
         </div>
     )
