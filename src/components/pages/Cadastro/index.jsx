@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import styles from './Cadastro.module.css'
-import logo from '../imagens/Educa logo.png'
+import logo from '../../imagens/Educa logo.png'
 import { MdMail, MdLock, MdPermIdentity } from "react-icons/md";
 import { HiEye, HiEyeOff } from "react-icons/hi";
 
@@ -54,8 +54,6 @@ function Cadastro() {
         <div className={styles.cadastro}>
 
             <div className={styles.cadastro_container}>
-            <img src={logo} alt="Logo Educa" />
-
                 <label htmlFor="name">Digite seu nome</label>
                 <div className={styles.cadastro_cadastroInputName}>
                 <MdPermIdentity/>
