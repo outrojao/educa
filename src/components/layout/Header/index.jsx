@@ -2,7 +2,7 @@ import React , { useState }from 'react';
 import { MdPermIdentity, MdSearch, MdToc } from "react-icons/md";
 import { Link } from 'react-router-dom'
 import styles from './Header.module.css'
-import logo from '../../imagens/Educa logo.png'
+import logo from '../../../imagens/Educa logo.png'
 const Header = () => {
 
     const [showNavBar, setShowNavBar] = useState(false)
@@ -13,7 +13,6 @@ const Header = () => {
 
     return (
         <>
-        <div className={styles.background}>
             <header className={styles.header_container}>
                 <div className={styles.header_items}>
                     <MdToc onClick={handleNavBarVisibility}/>
@@ -24,7 +23,6 @@ const Header = () => {
                     </div>
                 </div>
             </header>
-        </div>
             {showNavBar && (
                     <nav className={styles.navbar}>
                         <ul className={styles.list_nav}>

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import styles from './Cadastro.module.css'
-import logo from '../../imagens/Educa logo.png'
 import { MdMail, MdLock, MdPermIdentity } from "react-icons/md";
 import { HiEye, HiEyeOff } from "react-icons/hi";
 
