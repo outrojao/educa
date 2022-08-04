@@ -1,8 +1,8 @@
 import React , { useState }from 'react';
 import { MdPermIdentity, MdSearch, MdToc } from "react-icons/md";
-import { Link } from 'react-router-dom'
 import styles from './Header.module.css'
 import logo from '../../../imagens/Educa logo.png'
+import NavBar from './NavBar';
 const Header = () => {
 
     const [showNavBar, setShowNavBar] = useState(false)
@@ -23,24 +23,7 @@ const Header = () => {
                     </div>
                 </div>
             </header>
-            {showNavBar && (
-                    <nav className={styles.navbar}>
-                        <ul className={styles.list_nav}>
-                            <li>
-                                <Link to="/home">Home</Link>
-                            </li>
-                            <li>
-                                <Link to="/materias">Materias</Link>
-                            </li>
-                            <li>
-                                <Link to="/perfil">Perfil</Link>
-                            </li>
-                            <li>
-                                <Link to="/sobre">Sobre</Link>
-                            </li>
-                        </ul>
-                    </nav>
-                )}
+            {showNavBar && <NavBar/>}
         </>
      );
 }

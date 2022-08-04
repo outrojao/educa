@@ -7,7 +7,6 @@ const ListaTarefas = () => {
                 <input type="text" name="task" id="task" />
                 <button>Adicionar tarefa</button>
             </header>
-            
         </div>
      );
 }
