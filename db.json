@@ -1,0 +1,21 @@
+{
+    "usuarios":[
+        {
+            "name": "Eduardo",
+            "email": "jvsantosrocha980@gmail.com",
+            "senha": 123
+        }
+    ],
+    "tarefas":[
+        {
+            "id": 1,
+            "titulo": "Estudar biologia",
+            "completed": false
+        },
+        {
+            "id": 2,
+            "titulo": "Fazer exercícios",
+            "completed": true
+        }
+    ]
+}
