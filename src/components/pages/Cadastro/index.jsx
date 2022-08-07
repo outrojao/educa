@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { api } from '../../../services/api'
 import { Link, useNavigate } from 'react-router-dom';
 import styles from './Cadastro.module.css'
 import { MdMail, MdLock, MdPermIdentity } from "react-icons/md";
@@ -6,37 +7,53 @@ import { HiEye, HiEyeOff } from "react-icons/hi";
 
 function Cadastro() {
 
+    const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [senha, setSenha] = useState('')
     const [senhaAgain, setSenhaAgain] = useState('')
-    const [name, setName] = useState('')
+    
     const [showAgain, setShowAgain] = useState(false)
     const [show, setShow] = useState(false)
+
     const [userName, setUserName] = useState('')
     const [userEmail, setUserEmail] = useState('')
     const [userSenha, setUserSenha] = useState('')
 
+    const [user, setUser] = useState([])
+
     const navigate = useNavigate()
 
-    useEffect(() => {
-        if( userName && userEmail && userSenha ){
+    function cadastrarUsuario(usuario) {
+        api.post('/usuarios', usuario)
+        .then(() => {
             navigate('/')
-        }
-    })
+        }).catch((error) => console.log(error.response.data))
+    }
 
-    
-    function cadastrarUsuario(e){
+    function submit(e) {
         e.preventDefault()
-        if(!name || !email || !senha || !senhaAgain){
-            alert('Por favor cheque se os campos estão preenchidos')
-        } else if (senhaAgain !== senha){
-            alert('Por favor cheque se as senhas foram digitadas corretamente')
+        if(!verificarUsuario()){
+            alert('Verifique se os campos estão preenchidos')
+            console.log(verificarUsuario())
+        } else {
+            cadastrarUsuario(user)
+        }
+    }
+
+    function verificarUsuario(){
+        if(!user.name || !user.email || !user.senha || !senhaAgain){
+            return false
+        } else if(user.senha !== senhaAgain){
+            return false
         }
         else{
-            setUserName(name)
-            setUserEmail(email)
-            setUserSenha(senha)
+            return true
         }
+    }
+
+    function onChangeInput(e) {
+        e.preventDefault()
+        setUser({ ...user, [e.target.name]: e.target.value})
     }
 
     const handleClick = (e) => {
@@ -49,8 +66,10 @@ function Cadastro() {
         setShowAgain(!showAgain);
     }
 
+    //e => setEmail(e.target.value)
+
     return(
-        <div className={styles.cadastro}>
+        <form onSubmit={submit} className={styles.cadastro}>
 
             <div className={styles.cadastro_container}>
                 <label htmlFor="name">Digite seu nome</label>
@@ -59,9 +78,9 @@ function Cadastro() {
                     <input 
                         type="text"
                         placeholder="Nome e Sobrenome"
-                        value={name} 
-                        name="name"
-                        onChange={e => setName(e.target.value)}
+                        value={user.name ? user.name : ''} 
+                        name='name'
+                        onChange={onChangeInput}
                     />
 
                 </div>
@@ -72,9 +91,9 @@ function Cadastro() {
                     <input
                         type='email'
                         placeholder="email@email.com"
-                        value={email}
+                        value={user.email ? user.email : ''}
                         name='email'
-                        onChange={e => setEmail(e.target.value)}
+                        onChange={onChangeInput}
                     />
                 </div>
 
@@ -84,9 +103,9 @@ function Cadastro() {
                     <input
                         type={show ? 'text' : 'password'} //operador ternário
                         placeholder='senha123'
-                        value={senha}
-                        name='password'
-                        onChange={e => setSenha(e.target.value)}
+                        value={user.senha ? user.senha : ''}
+                        name='senha'
+                        onChange={onChangeInput}
                     />
                     <div className={styles.cadastro_eye}>
                         {show ? (
@@ -127,7 +146,7 @@ function Cadastro() {
                     </div>
                 </div>
 
-                <button type="submit" onClick={cadastrarUsuario}>
+                <button>
                     Cadastrar
                 </button>
 
@@ -138,7 +157,7 @@ function Cadastro() {
                 
             </div>
             
-        </div>
+        </form>
     )
 }
 
