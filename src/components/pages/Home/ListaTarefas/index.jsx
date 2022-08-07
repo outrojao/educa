@@ -22,9 +22,11 @@ const ListaTarefas = () => {
             <AddTarefa/>
 
             <ul>
-                {tarefas && tarefas.map((tarefa) => {
-                    return <Tarefa id={tarefa.id} titulo={tarefa.titulo} completed={tarefa.completed}/>
-                })}
+                {tarefas.length > 0 ? tarefas.map((tarefa) => (
+                    <Tarefa key={tarefa.id} titulo={tarefa.titulo} completed={tarefa.completed}/>
+                )) : (
+                    <p>Você não tem tarefas</p>
+                )}
             </ul>
         </div>
      );

@@ -6,18 +6,11 @@ import { MdMail, MdLock, MdPermIdentity } from "react-icons/md";
 import { HiEye, HiEyeOff } from "react-icons/hi";
 
 function Cadastro() {
-
-    const [name, setName] = useState('')
-    const [email, setEmail] = useState('')
-    const [senha, setSenha] = useState('')
+    
     const [senhaAgain, setSenhaAgain] = useState('')
     
     const [showAgain, setShowAgain] = useState(false)
     const [show, setShow] = useState(false)
-
-    const [userName, setUserName] = useState('')
-    const [userEmail, setUserEmail] = useState('')
-    const [userSenha, setUserSenha] = useState('')
 
     const [user, setUser] = useState([])
 
@@ -33,7 +26,7 @@ function Cadastro() {
     function submit(e) {
         e.preventDefault()
         if(!verificarUsuario()){
-            alert('Verifique se os campos estão preenchidos')
+            alert('Verifique se os campos estão preenchidos corretamente')
             console.log(verificarUsuario())
         } else {
             cadastrarUsuario(user)

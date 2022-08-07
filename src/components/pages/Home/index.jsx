@@ -1,8 +1,12 @@
 import React from 'react';
+import {useParams} from 'react-router-dom'
 import Header from '../../layout/Header';
 import styles from './Home.module.css'
 import ListaTarefas from './ListaTarefas';
 const Home = () => {
+
+    const { name } = useParams()
+
     return ( 
         <>
         <Header/>
@@ -17,7 +21,7 @@ const Home = () => {
                     </ul>
                 </section>
                 <section className={styles.usuario_home}>
-                    <h1>Olá, NOME DO USUÁRIO</h1>
+                    <h1>Olá, {name}</h1>
                     <ListaTarefas/>
                 </section>
             </main>
