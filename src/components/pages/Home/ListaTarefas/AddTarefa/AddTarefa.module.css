@@ -3,4 +3,34 @@
     justify-content: center;
     align-items: center;
     column-gap: 0.5rem;
+    margin: 0 5px;
+}
+
+.add_task_header input{
+    width: 100%;
+    border-radius: 3px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    outline-width: 0;
+    padding: 2.5px;
+}
+
+.add_task_header button{
+    background-color: #202024;
+    color: #EFF2F5;
+    font-weight: 700;
+    border-radius: 5px;
+    font-size: 18px;
+    border: none;
+    padding: 2px 5px;
+
+    outline-width: 0;
+}
+
+.add_task_header button:hover{
+    background-color: #171719;
+    color: #EFF2F5;
+    cursor: pointer;
 }

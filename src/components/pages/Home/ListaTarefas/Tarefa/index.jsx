@@ -1,7 +1,8 @@
 import React from 'react';
+import styles from './Tarefa.module.css'
 const Tarefa = ({id, titulo, completed}) => {
     return ( 
-        <li key={id}>{titulo}</li>
+        <li className={styles.tarefa} key={id}>{titulo}</li>
      );
 }
  

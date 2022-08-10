@@ -59,9 +59,9 @@ function Login() {
     }
 
     return(
-        <form onSubmit={logarUsuario} className={styles.login}>
+        <div className={styles.login}>
 
-            <div className={styles.login_container}>
+            <form onSubmit={logarUsuario} className={styles.login_container}>
             <img src={logo} alt="Logo Educa" />
                 <h1>Acessar App</h1>
 
@@ -107,9 +107,9 @@ function Login() {
                     Cadastrar
                 </Link>
                 
-            </div>
+            </form>
             
-        </form>
+        </div>
     )
 }
 

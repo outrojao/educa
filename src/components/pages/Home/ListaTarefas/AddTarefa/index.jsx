@@ -1,11 +1,20 @@
 import React from 'react';
 import styles from './AddTarefa.module.css'
-const AddTarefa = () => {
+const AddTarefa = ({setNovaTarefa, handleAddTarefa}) => {
+
+    function onChangeInput(e) {
+        e.preventDefault()
+        setNovaTarefa({
+                        titulo: e.target.value,
+                        completed: false
+                     })
+    }
+
     return ( 
-        <header className={styles.add_task_header}>
-                <input type="text" name="task" id="task" />
-                <button>Adicionar tarefa</button>
-        </header>
+            <header className={styles.add_task_header}>
+                    <input type="text" onChange={onChangeInput}/>
+                    <button onClick={handleAddTarefa}>Adicionar</button>
+            </header>
      );
 }
  

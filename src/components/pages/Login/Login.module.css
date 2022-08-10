@@ -16,13 +16,13 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
-    width: 500px;
-    height: 500px;
+    width: 31.25rem;
+    height: 31.25rem;
 }
 
 .login_container img{
-    width: 350px;
-    height: 120px;
+    width: 21.9rem;
+    height: 7.5rem;
     background: transparent;
     margin-bottom: 15px;
 }

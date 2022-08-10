@@ -1,0 +1,9 @@
+.tarefa{
+    background-color: #F4E7FF;
+    color: #000;
+    font-weight: 500;
+    font-family: 'Roboto Mono';
+    padding: 2px 5px;
+    border-radius: 4px;
+    border: 3px outset #333;
+}
