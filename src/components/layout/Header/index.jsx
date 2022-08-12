@@ -3,7 +3,7 @@ import { MdPermIdentity, MdSearch, MdToc } from "react-icons/md";
 import styles from './Header.module.css'
 import logo from '../../../imagens/Educa logo.png'
 import NavBar from './NavBar';
-const Header = () => {
+const Header = ({nomeUsuario}) => {
 
     const [showNavBar, setShowNavBar] = useState(false)
 
@@ -23,7 +23,7 @@ const Header = () => {
                     </div>
                 </div>
             </header>
-            {showNavBar && <NavBar/>}
+            {showNavBar && <NavBar nomeUsuario={nomeUsuario} />}
         </>
      );
 }

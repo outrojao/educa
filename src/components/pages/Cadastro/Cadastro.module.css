@@ -23,8 +23,9 @@
 
 .cadastro_container label{
     align-self: flex-start;
-    font-family: 'Arial', cursive;
+    font-family: 'Roboto Mono', cursive;
     font-size: 20px;
+    font-weight: bold;
     margin-top: 1rem;
 }
 

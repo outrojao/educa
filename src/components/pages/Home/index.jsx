@@ -9,7 +9,7 @@ const Home = () => {
 
     return ( 
         <>
-        <Header/>
+        <Header nomeUsuario={name} />
         <div className={styles.home}>
             <main className={styles.home_layout}>
                 <section className={styles.noticias}>

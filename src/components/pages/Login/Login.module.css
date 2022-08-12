@@ -18,6 +18,7 @@
     padding: 20px;
     width: 31.25rem;
     height: 31.25rem;
+    overflow: auto;
 }
 
 .login_container img{

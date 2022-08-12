@@ -8,7 +8,7 @@ import Tarefa from './Tarefa';
 const ListaTarefas = () => {
 
     const [tarefas, setTarefas] = useState([])
-    const [novaTarefa, setNovaTarefa] = useState([])
+    const [handlingTarefa, setHandlingTarefa] = useState([])
     const [deletarTarefa, setDeletarTarefa] = useState([])
 
     useEffect(() => { //o useEffect sera executado no momento em que o elemento for renderizado
@@ -16,17 +16,7 @@ const ListaTarefas = () => {
         .then((response) => {
             setTarefas(response.data)
         })
-    }, [tarefas])
-
-
-    function addTarefa(){
-        api.post('/tarefas', novaTarefa)
-        .then(() => {
-            console.log(tarefas)
-            setNovaTarefa('')
-        })
-        .catch((error) => console.log(error.response.data))
-    }
+    }, [handlingTarefa])
 
     function deleteTarefa(){
         api.delete('/tarefas', deletarTarefa)
@@ -39,7 +29,7 @@ const ListaTarefas = () => {
     return (    
         <div className={styles.lista_tasks}>
             
-            <AddTarefa setNovaTarefa={setNovaTarefa} handleAddTarefa={addTarefa}/>
+            <AddTarefa setHandlingTarefa={setHandlingTarefa}/>
 
             <ul>
                 {tarefas.length > 0 ? tarefas.map((tarefa) => (
@@ -48,6 +38,7 @@ const ListaTarefas = () => {
                     <p>Você não tem tarefas</p>
                 )}
             </ul>
+
         </div>
      );
 }

@@ -1,19 +1,36 @@
 import React from 'react';
+import { useState } from 'react';
+import { api } from '../../../../../services/api'
 import styles from './AddTarefa.module.css'
-const AddTarefa = ({setNovaTarefa, handleAddTarefa}) => {
+const AddTarefa = ({setHandlingTarefa}) => {
+
+    const [novaTarefa, setNovaTarefa] = useState([])
 
     function onChangeInput(e) {
-        e.preventDefault()
         setNovaTarefa({
                         titulo: e.target.value,
                         completed: false
                      })
     }
 
+    function addTarefa(){
+        if(novaTarefa.length === 0){
+            alert('Insira um nome para a tarefa')
+        } else {
+            api.post('/tarefas', novaTarefa)
+            .then(() => {
+            console.log(novaTarefa)
+            setHandlingTarefa(novaTarefa)
+            setNovaTarefa('')
+            })
+            .catch((error) => console.log(error.response.data))
+        }
+    }
+
     return ( 
             <header className={styles.add_task_header}>
                     <input type="text" onChange={onChangeInput}/>
-                    <button onClick={handleAddTarefa}>Adicionar</button>
+                    <button onClick={addTarefa}>Adicionar</button>
             </header>
      );
 }
