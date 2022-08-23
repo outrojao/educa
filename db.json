@@ -13,5 +13,31 @@
       "id": 2
     }
   ],
-  "tarefas": []
+  "tarefas": [
+    {
+      "titulo": "Fazer exercícios",
+      "completed": false,
+      "id": 1
+    },
+    {
+      "titulo": "Estudar biologia",
+      "completed": false,
+      "id": 2
+    },
+    {
+      "titulo": "Fazer anotações",
+      "completed": false,
+      "id": 3
+    },
+    {
+      "titulo": "Revisar o conteúdo",
+      "completed": false,
+      "id": 4
+    },
+    {
+      "titulo": "Ver vídeo-aula",
+      "completed": false,
+      "id": 5
+    }
+  ]
 }
