@@ -13,16 +13,5 @@
       "id": 2
     }
   ],
-  "tarefas": [
-    {
-      "id": 1,
-      "titulo": "Estudar biologia",
-      "completed": false
-    },
-    {
-      "id": 2,
-      "titulo": "Fazer exercícios",
-      "completed": true
-    }
-  ]
+  "tarefas": []
 }

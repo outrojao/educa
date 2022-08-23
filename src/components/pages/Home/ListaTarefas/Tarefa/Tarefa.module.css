@@ -1,4 +1,8 @@
 .tarefa{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    gap: 5px;
     background-color: #F4E7FF;
     color: #000;
     font-weight: 500;
@@ -6,4 +10,15 @@
     padding: 2px 5px;
     border-radius: 4px;
     border: 3px outset #333;
+}
+
+.tarefa svg{
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.tarefa svg:hover{
+    color: rgb(226, 92, 92);
 }

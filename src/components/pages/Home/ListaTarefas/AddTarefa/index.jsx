@@ -19,7 +19,6 @@ const AddTarefa = ({setHandlingTarefa}) => {
         } else {
             api.post('/tarefas', novaTarefa)
             .then(() => {
-            console.log(novaTarefa)
             setHandlingTarefa(novaTarefa)
             setNovaTarefa('')
             })
