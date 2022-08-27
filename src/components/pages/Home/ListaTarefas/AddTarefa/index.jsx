@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { api } from '../../../../../services/api'
 import styles from './AddTarefa.module.css'
 const AddTarefa = ({setHandlingTarefa}) => {

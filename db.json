@@ -15,29 +15,14 @@
   ],
   "tarefas": [
     {
-      "titulo": "Fazer exercícios",
-      "completed": false,
-      "id": 1
-    },
-    {
-      "titulo": "Estudar biologia",
+      "titulo": "baba",
       "completed": false,
       "id": 2
     },
     {
-      "titulo": "Fazer anotações",
+      "titulo": "uylky",
       "completed": false,
       "id": 3
-    },
-    {
-      "titulo": "Revisar o conteúdo",
-      "completed": false,
-      "id": 4
-    },
-    {
-      "titulo": "Ver vídeo-aula",
-      "completed": false,
-      "id": 5
     }
   ]
 }

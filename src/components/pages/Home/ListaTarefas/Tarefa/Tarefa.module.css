@@ -13,12 +13,12 @@
 }
 
 .tarefa svg{
-    color: red;
+    color: rgb(255, 49, 49);
     font-size: 20px;
     cursor: pointer;
     transition: 0.2s;
 }
 
 .tarefa svg:hover{
-    color: rgb(226, 92, 92);
+    color: rgb(179, 12, 12);
 }
