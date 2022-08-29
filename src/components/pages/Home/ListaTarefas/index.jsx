@@ -19,8 +19,8 @@ const ListaTarefas = () => {
 
     function deletarTarefa(idDaTarefa){
             api.delete(`/tarefas/${idDaTarefa}`).then(() => setHandlingTarefa('tarefa deletada')).catch(console.log)
-            // const updateTarefa = tarefas.filter((tarefa) => tarefa.id !== idDaTarefa)
-            // setTarefas(updateTarefa)
+            const updateTarefa = tarefas.filter((tarefa) => tarefa.id !== idDaTarefa)
+            setTarefas(updateTarefa)
         }
 
 

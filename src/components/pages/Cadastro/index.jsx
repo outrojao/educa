@@ -115,6 +115,15 @@ function Cadastro() {
                     </div>
                 </div>
 
+                <label htmlFor="curso">Selecione seu curso</label>
+                <div>
+                    <select name="curso" onChange={onChangeInput}>
+                        <option value="DS">Desenvolvimento de Sistemas</option>
+                        <option value="MA">Administração</option>
+                        <option value="MN">Nutrição</option>
+                    </select>
+                </div>
+
                 <h4>Digite a senha novamente</h4>
                 <div className={styles.cadastro_cadastroInputPassword}>
                     <MdLock/>

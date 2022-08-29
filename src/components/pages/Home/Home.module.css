@@ -30,6 +30,37 @@
     list-style: none;
 }
 
+.container_noticia{
+    background-color: #1f1f1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    width: 10rem;
+    height: 11rem;
+}
+
+.noticia{
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: column wrap;
+    row-gap: 0.5rem;
+    text-align: center;
+    font: 1em monospace;
+}
+
+.noticia h1{
+    text-shadow: 2px 2px 2px #000;
+}
+
+.noticia p{
+    background-color: #333;
+    padding: 5px;
+}
+
 .usuario_home{
     display: flex;
     justify-content: center;

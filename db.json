@@ -4,25 +4,43 @@
       "name": "Eduardo",
       "email": "jvsantosrocha980@gmail.com",
       "senha": "123",
+      "curso": "DS",
       "id": 1
     },
     {
       "name": "Chungus Melanius",
       "email": "chungus@email.com",
       "senha": "senha",
-      "id": 2
-    }
-  ],
-  "tarefas": [
-    {
-      "titulo": "baba",
-      "completed": false,
+      "curso": "MN",
       "id": 2
     },
     {
-      "titulo": "uylky",
-      "completed": false,
+      "name": "Rodrigo",
+      "email": "rodrigodrigo@gmail.com",
+      "senha": "qkl2345",
+      "curso": "MA",
       "id": 3
+    }
+  ],
+  "tarefas": [],
+  "noticias": [
+    {
+      "id": 1,
+      "curso": "DS",
+      "titulo": "Nova Versão do JavaScript",
+      "descricao": "O JavaScript foi atualizado recentemente"
+    },
+    {
+      "id": 2,
+      "curso": "DS",
+      "titulo": "Python será ensinado nas escolas",
+      "descricao": "De acordo com os alunos Pyhton > Portugol"
+    },
+    {
+      "id": 3,
+      "curso": "DS",
+      "titulo": "Steve Jobs ressuscitou",
+      "descricao": "O gênio da tecnologia está vivendo em Minas Gerais"
     }
   ]
 }

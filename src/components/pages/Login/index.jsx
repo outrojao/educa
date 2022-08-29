@@ -11,20 +11,22 @@ function Login() {
     const [show, setShow] = useState(false)
     const [userEmail, setUserEmail] = useState('')
     const [userSenha, setUserSenha] = useState('')
+    const [userEmailGet, setUserEmailGet] = useState('')
+    const [userSenhaGet, setUserSenhaGet] = useState('')
 
     const [user, setUser] = useState([])
 
     const navigate = useNavigate()
 
     useEffect(() => {
-        api.get(`/usuarios?email=${userEmail}`)
+        api.get(`/usuarios?email=${userEmailGet}`)
         .then((response) => setUser(response.data[0]))
         .catch((error) => console.log(error.response.data))
-    }, [userEmail])
+    }, [userEmailGet])
 
 
     function verificarDados(){
-       if(user.email === userEmail && user.senha === userSenha){
+       if(user.email === userEmailGet && user.senha === userSenhaGet){
             return true
        } else {
             return false
@@ -35,7 +37,6 @@ function Login() {
         e.preventDefault()
         if(!verificarCampos()){
             alert('Verifique se os campos estão preenchidos corretamente')
-            console.log(verificarCampos())
         } else {
             if(verificarDados()){
                 navigate(`/home/${user.name}`)
@@ -49,6 +50,8 @@ function Login() {
         if(!userEmail || !userSenha){
             return false
         } else {
+            setUserEmailGet(userEmail)
+            setUserSenhaGet(userSenha)
             return true
         }
     }
