@@ -22,7 +22,9 @@
       "id": 3
     }
   ],
+
   "tarefas": [],
+
   "noticias": [
     {
       "id": 1,
@@ -41,6 +43,34 @@
       "curso": "DS",
       "titulo": "Steve Jobs ressuscitou",
       "descricao": "O gênio da tecnologia está vivendo em Minas Gerais"
+    },
+    {
+      "id": 4,
+      "curso": "MA",
+      "titulo": "Planilhas",
+      "descricao": "Siga as dicas para fazer sua planilhia da maneira correta"
+    },
+    {
+      "id": 5,
+      "curso": "MA",
+      "titulo": "PowerPoint foi descontinuado",
+      "descricao": "Não haverá novas versões do PowerPoint"
+    },
+    {
+      "id": 6,
+      "curso": "MA",
+      "titulo": "Modelo A32",
+      "descricao": "Novo modelo de negócios e admnistração"
     }
+  ],
+
+  "cu": [
+    {"DS": [
+      {
+          "id": 1,
+          "titulo": "Nova Versão do JavaScript",
+          "descricao": "O JavaScript foi atualizado recentemente"
+      }
+    ]}
   ]
 }

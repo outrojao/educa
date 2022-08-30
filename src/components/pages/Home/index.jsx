@@ -12,7 +12,7 @@ const Home = () => {
     const [usuario, setUsuario] = useState([])
 
     useEffect(() => {
-        api.get('/noticias')
+        api.get(`/noticias?curso=${usuario.curso}`)
         .then((response) => setNoticias(response.data))
     }, [usuario])
 
@@ -31,16 +31,13 @@ const Home = () => {
                 <section className={styles.noticias}>
                     <ul>
                         {
-                            noticias.map((noticia) => {
-                                if(noticia.curso === usuario.curso){
-                                return <li className={styles.container_noticia} key={noticia.id}>
-                                        <div className={styles.noticia}>
-                                            <h1>{noticia.titulo}</h1>
-                                            <p>{noticia.descricao}</p>
-                                        </div>
-                                    </li>
-                                }
-                            })
+                            noticias.map((noticia) => <li className={styles.container_noticia} key={noticia.id}>
+                                                        <div className={styles.noticia}>
+                                                            <h1>{noticia.titulo}</h1>
+                                                            <p>{noticia.descricao}</p>
+                                                        </div>
+                                                      </li>
+                            )
                         }
                     </ul>
                 </section>

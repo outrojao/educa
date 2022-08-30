@@ -117,7 +117,7 @@ function Cadastro() {
 
                 <label htmlFor="curso">Selecione seu curso</label>
                 <div>
-                    <select name="curso" onChange={onChangeInput}>
+                    <select className={styles.cadastro_cadastroSelectCurso} name="curso" onChange={onChangeInput}>
                         <option value="DS">Desenvolvimento de Sistemas</option>
                         <option value="MA">Administração</option>
                         <option value="MN">Nutrição</option>

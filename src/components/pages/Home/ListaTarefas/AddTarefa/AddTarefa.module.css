@@ -10,8 +10,7 @@
     width: 100%;
     border-radius: 3px;
     color: rgb(0, 0, 0);
-    font-weight: bold;
-    font-size: 15px;
+    font: 500 15px Verdana, Geneva, Tahoma, sans-serif;
     border: none;
     outline-width: 0;
     padding: 2.5px;

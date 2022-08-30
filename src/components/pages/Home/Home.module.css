@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     background-color: #E6E6E6;
 }
@@ -13,6 +13,7 @@
     box-shadow: 5px 5px 5px #4D4DEB;
     color: rgb(241, 236, 236);
     padding: 1rem;
+    overflow-y: auto;
 }
 
 .noticias{
