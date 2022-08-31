@@ -6,3 +6,36 @@
     width: 100%;
     background-color: #E6E6E6;
 }
+
+.perfil_layout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: #3838AB;
+}
+
+.perfil_info{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    color: rgb(211, 211, 211);
+    margin: 5px 10px
+}
+
+.perfil_info h1{
+    text-shadow: 1px 1px 5px #1F1F5E;
+    font-size: 30px;
+    margin: 5px 0;
+}
+
+.perfil_info h2{
+    font-size: 20px;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+.perfil_info input{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

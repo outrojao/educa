@@ -11,9 +11,9 @@ const Perfil = () => {
         <>
             <Header nomeUsuario={name}/>
             <div className={styles.perfil}>
-                <main>
-                    <section>
-                
+                <main className={styles.perfil_layout}>
+                    <section className={styles.perfil_info}>
+                        <h2>Escolha uma foto</h2>
                         <input type="file" name="" id="" accept='Image/*'/>
                         <h1>{name}</h1>
                         <p>Mude seu perfil a vontade</p>
