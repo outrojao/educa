@@ -10,15 +10,32 @@
     padding: 2px 5px;
     border-radius: 4px;
     border: 3px outset #333;
+    cursor: pointer;
 }
 
-.tarefa svg{
+.tarefa svg, .tarefaCompletada svg{
     color: rgb(255, 49, 49);
     font-size: 20px;
     cursor: pointer;
     transition: 0.2s;
 }
 
-.tarefa svg:hover{
+.tarefa svg:hover, .tarefaCompletada svg:hover{
     color: rgb(179, 12, 12);
+}
+
+.tarefaCompletada{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    gap: 5px;
+    background-color: #F4E7FF;
+    font-weight: 500;
+    font-family: 'Roboto Mono';
+    padding: 2px 5px;
+    border-radius: 4px;
+    border: 3px outset #333;
+    cursor: pointer;
+    text-decoration: line-through;
+    color: gray;
 }

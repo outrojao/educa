@@ -16,6 +16,8 @@
     padding: 5px 10px;
     margin: 10px;
     border-radius: 5px;
+    max-height: 230px;
+    overflow-y: auto;
 }
 
 .lista_tasks ul p{

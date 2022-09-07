@@ -14,28 +14,50 @@
     flex-flow: column wrap;
     border-radius: 15px;
     padding: 10px;
-    background-color: #3838AB;
+    background-color: #2C2C85;
+    width: 19rem;
+    max-height: 80%;
 }
 
-.perfil_info{
+.perfil_infoPrincipais{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
-    color: rgb(211, 211, 211);
+    color: #fff;
     margin: 5px 10px
 }
 
-.perfil_info h1{
-    text-shadow: 1px 1px 5px #1F1F5E;
+.perfil_infoPrincipais h1{
+    text-shadow: 1px 1px 5px #2D2533;
     font-size: 30px;
     margin: 5px 0;
 }
 
-.perfil_info h2{
+.perfil_infoPrincipais h2{
     font-size: 20px;
     text-decoration: underline;
     margin-bottom: 10px;
 }
 
-.perfil_info input{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.perfil_infoPrincipais img{
+    height: 50px;
+    width: 50px;
+    clip-path: 10px;
+}
+
+.perfil_layout h3{
+    text-shadow: 2px 2px #121113;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.perfil_descricao{
+    text-align: center;
+    color: #e6e6e6;
+    background-color: #2F2F45;
+    width: 90%;
+    font: 16px monospace;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 4px 3px black;
 }

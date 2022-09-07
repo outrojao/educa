@@ -20,8 +20,6 @@ const Home = () => {
         api.get(`/usuarios?name=${name}`)
         .then((response) => setUsuario(response.data[0]))
     }, [name])
-    
-    console.log(noticias)
 
     return ( 
         <>

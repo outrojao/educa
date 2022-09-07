@@ -22,9 +22,7 @@
       "id": 3
     }
   ],
-
   "tarefas": [],
-
   "noticias": [
     {
       "id": 1,
@@ -62,15 +60,5 @@
       "titulo": "Modelo A32",
       "descricao": "Novo modelo de negócios e admnistração"
     }
-  ],
-
-  "cu": [
-    {"DS": [
-      {
-          "id": 1,
-          "titulo": "Nova Versão do JavaScript",
-          "descricao": "O JavaScript foi atualizado recentemente"
-      }
-    ]}
   ]
 }
