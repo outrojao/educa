@@ -32,10 +32,12 @@ const ListaTarefas = () => {
 
     function completarTarefa(idDaTarefa) {
         setTarefasCompletas(tarefasCompletas + 1)
-        let tarefaCompletada = tarefas.filter((tarefa) => tarefa.id === idDaTarefa)
-        tarefaCompletada = { completed: !tarefaCompletada.completed }
-        api.patch(`/tarefas/${idDaTarefa}`, tarefaCompletada).then(() => setHandlingTarefa('tarefa completa')).catch(console.log)
-        //setTarefas(...tarefas, tarefaCompletada)
+        api.patch(`/tarefas/${idDaTarefa}`, {completed: true}).then(() => setHandlingTarefa('tarefa completa')).catch(console.log)
+        const updateTarefas = tarefas.map(tarefa => {
+            if(tarefa.id === idDaTarefa) return  {...tarefa, completed: true}
+            return tarefa;
+          });
+            setTarefas(updateTarefas)
     }
 
     return (    

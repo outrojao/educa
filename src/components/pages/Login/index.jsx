@@ -19,9 +19,11 @@ function Login() {
     const navigate = useNavigate()
 
     useEffect(() => {
-        api.get(`/usuarios?email=${userEmailGet}`)
-        .then((response) => setUser(response.data[0]))
-        .catch((error) => console.log(error.response.data))
+        if(userEmailGet !== ''){
+            api.get(`/usuarios?email=${userEmailGet}`)
+            .then((response) => setUser(response.data[0]))
+            .catch((error) => console.log(error.response.data))
+        }
     }, [userEmailGet])
 
 
