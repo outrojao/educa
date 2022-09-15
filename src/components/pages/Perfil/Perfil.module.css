@@ -34,14 +34,28 @@
 
 .perfil_infoPrincipais h2{
     font-size: 20px;
-    text-decoration: underline;
     margin-bottom: 10px;
+    font-family: monospace;
+}
+
+.perfil_infoPrincipais button{
+    background-color: #202024;
+    color: #EFF2F5;
+    font-weight: 700;
+    border-radius: 5px;
+    font-size: 18px;
+    border: none;
+    padding: 10px 5px;
+    outline-width: 0;
+    cursor: pointer;
 }
 
 .perfil_infoPrincipais img{
-    height: 50px;
-    width: 50px;
-    clip-path: 10px;
+    height: 200px;
+    width: 200px;
+    margin: 10px 0;
+    border-radius: 50%;
+    filter: drop-shadow(5px 5px 5px black);
 }
 
 .perfil_layout h3{

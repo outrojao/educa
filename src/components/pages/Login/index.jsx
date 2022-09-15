@@ -26,7 +26,6 @@ function Login() {
         }
     }, [userEmailGet])
 
-
     function verificarDados(){
        if(user.email === userEmailGet && user.senha === userSenhaGet){
             return true

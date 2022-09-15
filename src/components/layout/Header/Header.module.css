@@ -23,6 +23,7 @@
 .header_items img{
     height: 2rem;
     width: 5.5rem;
+    cursor: pointer;
 }
 
 .header_icons {

@@ -2,28 +2,29 @@ import { useState, useRef, useEffect } from 'react';
 import styles from './Perfil.module.css'
 import Header from '../../layout/Header';
 import { useParams } from 'react-router-dom';
+import iconPerfil from '../../../imagens/perfil.png'
 
 const Perfil = () => {
 
     const { name } = useParams()
 
-    const fileInputRef = useRef() //<HTMLInputElement>
-    const [imagemPerfil, setImagemPerfil] = useState() //<File>
-    const [preview, setPreview] = useState() //<string>
+    const fileInputRef = useRef()
+    const [imagemPerfil, setImagemPerfil] = useState()
+    const [preview, setPreview] = useState()
 
     useEffect(() => {
-        if(imagemPerfil) {
-            const reader = new FileReader()
-            reader.onloadend = () => {
-
+        if(imagemPerfil){
+            const leitorDoArquivo = new FileReader()
+            leitorDoArquivo.onloadend = () => {
+                setPreview(leitorDoArquivo.result)
             }
-            reader.readAsDataURL(imagemPerfil)
+            leitorDoArquivo.readAsDataURL(imagemPerfil)
         } else {
-
+            setPreview(null)
         }
     }, [imagemPerfil])
 
-    
+    console.log(preview)
 
     return ( 
         <>
@@ -31,23 +32,36 @@ const Perfil = () => {
             <div className={styles.perfil}>
                 <main className={styles.perfil_layout}>
                     <section className={styles.perfil_infoPrincipais}>
-                        <h2>Escolha uma foto</h2>
-                        <button
-                            onClick={() => {
-                                fileInputRef.current.click()
-                            }}
-                        >
-                            Adicionar imagem
-                        </button>
+                        {preview ? ( 
+                            <img 
+                                src={preview} 
+                                alt={`Imagem de Perfil de ${name}`} 
+                                onClick={() => {
+                                    fileInputRef.current.click()
+                                }}
+                            /> 
+                        )
+                        : (
+                            <div>
+                                <h2>Selecione uma foto</h2>
+                                <img 
+                                    src={iconPerfil}
+                                    alt="Imagem Perfil"
+                                    onClick={() => {
+                                        fileInputRef.current.click()
+                                    }}
+                                />
+                            </div>
+                        )}
                         <input 
                             type="file" 
                             style={{ display: "none" }} 
                             ref={fileInputRef}
                             accept='image/*'
                             onChange={(e) => {
-                                const file = e.target.files[0]
-                                if(file){
-                                    setImagemPerfil(file)
+                                const imagem = e.target.files[0]
+                                if(imagem){
+                                    setImagemPerfil(imagem)
                                 } else {
                                     setImagemPerfil(null)
                                 }
