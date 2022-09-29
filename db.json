@@ -2,6 +2,7 @@
   "usuarios": [
     {
       "name": "Eduardo",
+      "trofeu": false,
       "email": "jvsantosrocha980@gmail.com",
       "senha": "123",
       "curso": "DS",
@@ -9,6 +10,7 @@
     },
     {
       "name": "Chungus Melanius",
+      "trofeu": false,
       "email": "chungus@email.com",
       "senha": "senha",
       "curso": "MN",
@@ -16,13 +18,33 @@
     },
     {
       "name": "Rodrigo",
+      "trofeu": false,
       "email": "rodrigodrigo@gmail.com",
       "senha": "qkl2345",
       "curso": "MA",
       "id": 3
+    },
+    {
+      "name": "Raissa",
+      "trofeu": false,
+      "email": "raissa@email.com",
+      "senha": "senhateste",
+      "curso": "MA",
+      "id": 49
     }
   ],
-  "tarefas": [],
+  "tarefas": [
+    {
+      "titulo": "1",
+      "completed": false,
+      "id": 1
+    },
+    {
+      "titulo": "2",
+      "completed": false,
+      "id": 2
+    }
+  ],
   "noticias": [
     {
       "id": 1,

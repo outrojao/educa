@@ -46,7 +46,7 @@ function Cadastro() {
 
     function onChangeInput(e) {
         e.preventDefault()
-        setUser({ ...user, [e.target.name]: e.target.value})
+        setUser({ ...user, [e.target.name]: e.target.value, trofeu: false})
     }
 
     const handleClick = (e) => {

@@ -41,7 +41,7 @@ const Home = () => {
                 </section>
                 <section className={styles.usuario_home}>
                     <h1>Olá, {name}</h1>
-                    <ListaTarefas/>
+                    <ListaTarefas nomeUsuario={name}/>
                 </section>
             </main>
         </div>
