@@ -1,0 +1,82 @@
+#34349D -- primeira cor 
+#9494EB -- segunda cor
+#23236B -- terceira cor
+
+.sobre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    padding: 20px 10px;
+}
+
+.content h1{
+    text-align: center;
+    color: white;
+    font: bold 30pt Arial;
+    text-shadow: 2px 2px 2px black;
+}
+
+.content p{
+    text-align: justify;
+    font: normal 20pt 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #e6e6e6;
+    margin: 20px 100px;
+}
+
+.content img{
+    height: 100px;
+    width: 300px;
+}
+
+.o_que_e{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 650px;
+    background-color: #34349D;
+}
+
+.fotos_alunos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 30px;
+}
+
+.fotos_alunos img{
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 2px black;
+}
+
+.fotos_alunos figcaption{
+    text-align: center;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.motivo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 650px;
+    background-color: #312938;
+}
+
+.objetivo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 650px;
+    background-color: #8830D1;
+}

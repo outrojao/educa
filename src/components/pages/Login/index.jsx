@@ -14,19 +14,17 @@ function Login() {
     const [userEmailGet, setUserEmailGet] = useState('')
     const [userSenhaGet, setUserSenhaGet] = useState('')
 
-    const [user, setUser] = useState([])
+    const [user, setUser] = useState({})
 
     const navigate = useNavigate()
 
     useEffect(() => {
-        if(userEmailGet !== ''){
-            api.get(`/usuarios?email=${userEmailGet}`)
-            .then((response) => setUser(response.data[0]))
-            .catch((error) => console.log(error.response.data))
-        }
     }, [userEmailGet])
 
     function verificarDados(){
+        api.get(`/usuarios?email=${userEmailGet}`)
+        .then((response) => setUser(response.data[0]))
+        .catch((error) => console.log(error.response.data))
        if(user.email === userEmailGet && user.senha === userSenhaGet){
             return true
        } else {

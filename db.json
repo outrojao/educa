@@ -2,7 +2,7 @@
   "usuarios": [
     {
       "name": "Eduardo",
-      "trofeu": false,
+      "trofeu": true,
       "email": "jvsantosrocha980@gmail.com",
       "senha": "123",
       "curso": "DS",
@@ -30,21 +30,10 @@
       "email": "raissa@email.com",
       "senha": "senhateste",
       "curso": "MA",
-      "id": 49
+      "id": 4
     }
   ],
-  "tarefas": [
-    {
-      "titulo": "1",
-      "completed": false,
-      "id": 1
-    },
-    {
-      "titulo": "2",
-      "completed": false,
-      "id": 2
-    }
-  ],
+  "tarefas": [],
   "noticias": [
     {
       "id": 1,

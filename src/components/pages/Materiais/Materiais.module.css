@@ -1,0 +1,74 @@
+.materiais{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #E6E6E6;
+}
+
+.titulo{
+    background-color: #34349D;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 10px;
+}
+
+.conteudos{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    grid-template-areas: 
+    "box-1 box-1 box-2 box-2"
+    "box-3 box-3 box-4 box-4"
+    ;
+}
+
+.conteudos section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 90px;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+.conteudos section summary{
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.conteudos section ul{
+    list-style: none;
+}
+
+.conteudos section a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10pt;
+}
+
+.portugues{
+    grid-area: box-1;
+    background-color: rgb(228, 103, 89);
+}
+
+.matematica{
+    grid-area: box-2;
+    background-color: rgb(0, 60, 255);
+}
+
+.geografia{
+    grid-area: box-3;
+    background-color: orangered;
+}
+
+.historia{
+    grid-area: box-4;
+    background-color: burlywood;
+}
