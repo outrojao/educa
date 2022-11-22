@@ -9,28 +9,12 @@
       "id": 1
     },
     {
-      "name": "Chungus Melanius",
-      "trofeu": false,
-      "email": "chungus@email.com",
-      "senha": "senha",
-      "curso": "MN",
-      "id": 2
-    },
-    {
       "name": "Rodrigo",
       "trofeu": false,
       "email": "rodrigodrigo@gmail.com",
       "senha": "qkl2345",
       "curso": "MA",
       "id": 3
-    },
-    {
-      "name": "Raissa",
-      "trofeu": false,
-      "email": "raissa@email.com",
-      "senha": "senhateste",
-      "curso": "MA",
-      "id": 4
     }
   ],
   "tarefas": [],

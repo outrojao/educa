@@ -1,59 +1,49 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import { api } from '../../../services/api'
 import styles from './Login.module.css'
 import logo from '../../../imagens/Educa logo.png'
 import { MdMail, MdLock } from "react-icons/md";
 import { HiEye, HiEyeOff } from "react-icons/hi";
+import { useEffect } from "react";
 
 function Login() {
 
     const [show, setShow] = useState(false)
     const [userEmail, setUserEmail] = useState('')
     const [userSenha, setUserSenha] = useState('')
-    const [userEmailGet, setUserEmailGet] = useState('')
-    const [userSenhaGet, setUserSenhaGet] = useState('')
 
     const [user, setUser] = useState({})
 
     const navigate = useNavigate()
 
     useEffect(() => {
-    }, [userEmailGet])
+        api.get(`/usuarios?email=${userEmail}`)
+                .then((response) => setUser(response.data[0]))
+                .catch((error) => console.log(error.response.data))
+    }, [userEmail])
 
     function verificarDados(){
-        api.get(`/usuarios?email=${userEmailGet}`)
-        .then((response) => setUser(response.data[0]))
-        .catch((error) => console.log(error.response.data))
-       if(user.email === userEmailGet && user.senha === userSenhaGet){
-            return true
-       } else {
-            return false
-       }
+        if(userEmail !== '' & userSenha !== ''){
+            if(user.email === userEmail && user.senha === userSenha){
+                return true
+            } else {
+                return false
+            }
+        } else {
+            alert('Verifique se os campos estão preenchidos corretamente')
+        }
     }
 
     function logarUsuario(e) {
         e.preventDefault()
-        if(!verificarCampos()){
-            alert('Verifique se os campos estão preenchidos corretamente')
+        if(verificarDados()){
+            navigate(`/home/${user.name}`)
         } else {
-            if(verificarDados()){
-                navigate(`/home/${user.name}`)
-            } else {
-                alert('Não foi possível achar nenhum login correspondente')
-            }
+            alert('Não foi possível achar nenhum login correspondente')
         }
     }
 
-    function verificarCampos(){
-        if(!userEmail || !userSenha){
-            return false
-        } else {
-            setUserEmailGet(userEmail)
-            setUserSenhaGet(userSenha)
-            return true
-        }
-    }
     
     const handleClick = (e) => {
         e.preventDefault()

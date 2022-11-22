@@ -38,6 +38,7 @@
 }
 
 .conteudos section summary{
+    cursor: pointer;
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -49,26 +50,32 @@
 .conteudos section a{
     text-decoration: none;
     color: #fff;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 10pt;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.conteudos section a:hover{
+    color: rgb(32, 26, 26);
 }
 
 .portugues{
     grid-area: box-1;
-    background-color: rgb(228, 103, 89);
+    background-color: rgb(0, 60, 255);
 }
 
 .matematica{
     grid-area: box-2;
-    background-color: rgb(0, 60, 255);
+    background-color: rgb(245, 24, 24);
 }
 
 .geografia{
     grid-area: box-3;
-    background-color: orangered;
+    background-color: rgb(248, 86, 27);
 }
 
 .historia{
     grid-area: box-4;
-    background-color: burlywood;
+    background-color: rgb(255, 212, 22);
 }
