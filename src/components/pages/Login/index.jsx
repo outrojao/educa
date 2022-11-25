@@ -24,26 +24,27 @@ function Login() {
     }, [userEmail])
 
     function verificarDados(){
-        if(userEmail !== '' & userSenha !== ''){
-            if(user.email === userEmail && user.senha === userSenha){
-                return true
-            } else {
-                return false
-            }
+        if(userEmail === '' || userSenha === ''){
+            alert('Preencha os campos corretamente')
         } else {
-            alert('Verifique se os campos estão preenchidos corretamente')
+            if(user){
+                if(user.email === userEmail && user.senha === userSenha){
+                    return true
+                } else {
+                    return false
+                }
+            }
         }
     }
 
     function logarUsuario(e) {
         e.preventDefault()
-        if(verificarDados()){
-            navigate(`/home/${user.name}`)
-        } else {
-            alert('Não foi possível achar nenhum login correspondente')
-        }
+            if(verificarDados()){
+                navigate(`/home/${user.name}`)
+            } else {
+                alert('Não foi possível achar nenhum login correspondente, por favor verifique os campos')
+            }
     }
-
     
     const handleClick = (e) => {
         e.preventDefault()
